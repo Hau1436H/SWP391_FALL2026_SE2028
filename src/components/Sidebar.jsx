@@ -11,13 +11,14 @@ import iconMessages from '../assets/icons/messages.svg';
 import iconProfile from '../assets/icons/profile.svg';
 import iconBilling from '../assets/icons/billing.svg';
 import iconSettings from '../assets/icons/settings.svg';
-import defaultLogo from '../assets/logo-placeholder.svg';
+import defaultLogo from '../assets/LogoBlue.png';
 
 export default function Sidebar({
-  logoSrc = defaultLogo, // Khi có logo.png, bạn chỉ cần thay đường dẫn tại đây hoặc truyền qua prop!
+  logoSrc = defaultLogo,
   activeTab = 'Dashboard',
   onTabChange,
 }) {
+  const currentLogo = logoSrc || defaultLogo;
   const mainNavItems = [
     { id: 'Dashboard', label: 'Dashboard', iconSrc: iconDashboard, dotColor: 'bg-slate-900' },
     { id: 'My Horses', label: 'My Horses', iconSrc: iconHorses, dotColor: 'bg-slate-400' },
@@ -39,13 +40,13 @@ export default function Sidebar({
       {/* 1. KHU VỰC LOGO: DÀNH KHOẢNG TRỐNG RIÊNG CHO FILE PNG CỦA BẠN               */}
       {/* Bạn có thể đặt file logo.png vào thư mục src/assets/ và truyền vào logoSrc */}
       {/* ========================================================================= */}
-      <div className="h-20 px-6 flex items-center border-b border-transparent">
-        <div className="w-full h-12 flex items-center">
-          {logoSrc ? (
+      <div className="h-20 px-5 flex items-center border-b border-transparent">
+        <div className="w-full flex items-center">
+          {currentLogo ? (
             <img
-              src={logoSrc}
+              src={currentLogo}
               alt="International Equine Transport"
-              className="max-h-11 w-auto object-contain cursor-pointer transition-transform hover:scale-102"
+              className="h-10 w-auto max-w-full object-contain cursor-pointer transition-transform hover:scale-105"
             />
           ) : (
             /* Khung placeholder trống để gắn file PNG sau này */

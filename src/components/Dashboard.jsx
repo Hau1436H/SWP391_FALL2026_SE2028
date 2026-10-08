@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import StatCard from './StatCard';
 import HorseCard from './HorseCard';
 import HorseWatermark from './HorseWatermark';

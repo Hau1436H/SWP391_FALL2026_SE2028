@@ -2,18 +2,13 @@ import React, { useState } from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
+import logoBlue from './assets/LogoBlue.png';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('Dashboard');
   const [searchQuery, setSearchQuery] = useState('');
 
-  // --------------------------------------------------------------------------
-  // 1. LOGO PNG: Khi bạn có file logo.png, hãy đặt vào `src/assets/logo.png`
-  // và import vào đây:
-  // import myCustomLogo from './assets/logo.png';
-  // Sau đó truyền vào Sidebar prop: `logoSrc={myCustomLogo}`
-  // --------------------------------------------------------------------------
-  const customLogoPng = null; // Thay bằng đường dẫn ảnh logo.png khi bạn có
+  const logoSrc = logoBlue;
 
   const handleBook = () => {
     alert('Chức năng đặt chuyến (+ Book) được kích hoạt!');
@@ -27,7 +22,7 @@ export default function App() {
     <div className="min-h-screen flex bg-[#FAF6EE] text-slate-800 antialiased font-sans selection:bg-amber-200">
       {/* Cột Sidebar bên trái */}
       <Sidebar
-        logoSrc={customLogoPng}
+        logoSrc={logoSrc}
         activeTab={activeTab}
         onTabChange={(tab) => setActiveTab(tab)}
       />

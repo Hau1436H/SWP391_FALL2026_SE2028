@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+  <!-- Horse silhouette emblem -->
+  <g transform="translate(4, 2)">
+    <rect width="44" height="40" rx="6" fill="#1B365D"/>
+    <!-- Horse head & speed lines -->
+    <path d="M38 12H24L21 9H13L8 16V22L12 21L15 25L23 20L38 20V12Z" fill="white"/>
+    <path d="M6 24H38V27H6V24Z" fill="white"/>
+    <path d="M10 29H38V32H10V29Z" fill="white"/>
+    <path d="M16 34H38V37H16V34Z" fill="white"/>
+  </g>
+  <!-- Brand text -->
+  <text x="56" y="21" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="900" font-style="italic" font-size="14" fill="#1B365D" letter-spacing="0.5">INTERNATIONAL</text>
+  <text x="56" y="36" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="900" font-style="italic" font-size="13" fill="#1B365D" letter-spacing="0.3">EQUINE TRANSPORT</text>
+</svg>
